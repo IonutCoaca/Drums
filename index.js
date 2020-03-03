@@ -1,3 +1,5 @@
+
+//Verifies which key was clicked on 
 function checkLetter(letter){
     switch (letter) {
         case "w":
@@ -37,6 +39,7 @@ function checkLetter(letter){
 //de scos
 
 
+//Verifies which keyboard key was pressed.
 function buttonAnimation(currentKey){
 
     var activeButton = document.querySelector("."+currentKey);
@@ -47,7 +50,7 @@ function buttonAnimation(currentKey){
 }
 
   
-
+//sets a listener to all the .button classes
 for (var i = 0; i < document.getElementsByTagName("button").length; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click", function(){
  
@@ -58,8 +61,8 @@ for (var i = 0; i < document.getElementsByTagName("button").length; i++) {
 });
 }
 
+//sets a listener to the whole doc for key press
 document.addEventListener("keypress",function(event){
     checkLetter(event.key);
-//de scos
     buttonAnimation(event.key);
 })
